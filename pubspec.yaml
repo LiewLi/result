@@ -1,7 +1,7 @@
 name: result
-version: 1.0.0
+version: 1.0.1
 description: >-
-  Object that represents either a success or a failure; 'success' or 'failure' for each case.
+  Object that represents either a success or a failure; 'success' or 'failure' for each case.add
 author: LiewLi <liulimg@gmail.com>
 homepage: https://github.com/LiewLi/result
 environment:
