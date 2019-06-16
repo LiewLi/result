@@ -1,4 +1,8 @@
-# v1.0.x
+# v1.0.3
+pubspec update
+# v1.0.2
+typo fix
+# v1.0.1
 pubspec update
 # v1.0.0
 api stable
