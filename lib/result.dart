@@ -2,7 +2,7 @@ class Result<Success, Failure> {
   Success _success;
   Failure _failure;
 
-  Result._({success = null, failure = null}) {
+  Result._({success, failure}) {
     this._success = success;
     this._failure = failure;
   }
@@ -53,7 +53,7 @@ class Result<Success, Failure> {
   }
 
   Success get() {
-    if (_success != null) return _success;
-    else throw _failure; 
+    if (_success != null) {return _success;}
+    else {throw _failure;} 
   }
 }

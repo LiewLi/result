@@ -1,7 +1,7 @@
 name: result
-version: 0.0.1
+version: 0.0.2
 description: >-
-  A value that represents either a success or a failure
+  Object that represents either a success or a failure
 author: LiewLi <liulimg@gmail.com>
 homepage: https://github.com/LiewLi/result
 environment:
