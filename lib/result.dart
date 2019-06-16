@@ -7,8 +7,8 @@ class Result<Success, Failure> {
     this._failure = failure;
   }
 
-  Result.success(Success s): this._(success:s);
-  Result.failure(Failure f): this._(failure:f);
+  Result.success(Success s) : this._(success: s);
+  Result.failure(Failure f) : this._(failure: f);
 
   Result(Success Function() catching) {
     try {
@@ -18,14 +18,13 @@ class Result<Success, Failure> {
     }
   }
 
-  map<NewSuccess>(NewSuccess Function (Success) transform) {
+  map<NewSuccess>(NewSuccess Function(Success) transform) {
     if (_success != null) {
       return new Result.success(transform(_success));
     } else {
       return new Result.failure(_failure);
     }
   }
-
 
   mapError<NewFailure>(NewFailure Function(Failure) transform) {
     if (_failure != null) {
@@ -37,14 +36,14 @@ class Result<Success, Failure> {
 
   flatmap<NewSuccess>(Result<NewSuccess, Failure> Function(Success) transform) {
     if (_success != null) {
-        return Result.success(transform(_success));
+      return Result.success(transform(_success));
     } else {
       return Result.failure(_failure);
     }
-  } 
+  }
 
-
-  flatMapError<NewFailure>(Result<Success, NewFailure> Function(Failure) transform) {
+  flatMapError<NewFailure>(
+      Result<Success, NewFailure> Function(Failure) transform) {
     if (_failure != null) {
       return Result.failure(transform(_failure));
     } else {
@@ -53,7 +52,10 @@ class Result<Success, Failure> {
   }
 
   Success get() {
-    if (_success != null) {return _success;}
-    else {throw _failure;} 
+    if (_success != null) {
+      return _success;
+    } else {
+      throw _failure;
+    }
   }
 }
