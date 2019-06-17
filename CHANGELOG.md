@@ -1,3 +1,5 @@
+# v1.0.4
+LICENSE update
 # v1.0.3
 pubspec update
 # v1.0.2
